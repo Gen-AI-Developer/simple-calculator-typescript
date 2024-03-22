@@ -21,19 +21,19 @@ const answer = await inquirer.prompt([
         ],
     },
 ])
-if (answer.Operation == 'Addition') {
+if (answer.Operation === 'Addition') {
     console.log('Addition  = ', Number(answer.first) + Number(answer.second))
 }
-else if (answer.Operation == 'Subtraction') {
-    console.log('Addition  = ', Number(answer.first) - Number(answer.second))
+else if (answer.Operation === 'Subtraction') {
+    console.log('Substraction  = ', Number(answer.first) - Number(answer.second))
 
 }
-else if (answer.Operation == 'Multiplication') {
-    console.log('Addition  = ', Number(answer.first) * Number(answer.second))
+else if (answer.Operation === 'Multiplication') {
+    console.log('Multiplication  = ', Number(answer.first) * Number(answer.second))
 
 }
-else if (answer.Operation == 'Divion') {
-    console.log('Addition  = ', Number(answer.first) / Number(answer.second))
+else if (answer.Operation === 'Division') {
+    console.log('Division  = ', Math.floor(Number(answer.first) / Number(answer.second)))
 
 }
 else {
