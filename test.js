@@ -1,5 +1,4 @@
 import inquirer from 'inquirer';
-
 async function calculate() {
     const answer = await inquirer.prompt([
         {
@@ -23,16 +22,19 @@ async function calculate() {
             ],
         },
     ]);
-
     if (answer.Operation === 'Addition') {
         console.log('Addition  = ', Number(answer.first) + Number(answer.second));
-    } else if (answer.Operation === 'Subtraction') {
+    }
+    else if (answer.Operation === 'Subtraction') {
         console.log('Subtraction  = ', Number(answer.first) - Number(answer.second));
-    } else if (answer.Operation === 'Multiplication') {
+    }
+    else if (answer.Operation === 'Multiplication') {
         console.log('Multiplication  = ', Number(answer.first) * Number(answer.second));
-    } else if (answer.Operation === 'Division') {
+    }
+    else if (answer.Operation === 'Division') {
         console.log('Division  = ', Math.floor(Number(answer.first) / Number(answer.second)));
-    } else {
+    }
+    else {
         console.log('Better Luck Next time. Try Again');
     }
     const app = await inquirer.prompt([
@@ -45,12 +47,12 @@ async function calculate() {
                 'No'
             ],
         },
-    ])
+    ]);
     if (app.application === 'Yes') {
         await calculate();
     }
     else if (app.application === 'No') {
-        console.log('Thanks For Using This Application')
+        console.log('Thanks For Using This Application');
     }
 }
 calculate();
